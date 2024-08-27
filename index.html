@@ -10,28 +10,56 @@
 </head>
 <body>
     <!-- Navbar -->
-     <header>
+     <header id="home">
         <nav>
             <ul id="main-nav">
-                <li><a href="#home">Startseite</a></li>
-                <li><a href="#about">Über mich</a></li>
+                <li>
+                    <a href="#home">Startseite</a>
+                </li>
+                <li>
+                    <a href="#about">Über mich</a>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Projekte</a>
+                    <div class="dropdown-content">
+                        <a href="#project-webseite">Meine Homepage</a>
+                        <a href="#project-antiafk">Python Anti-AFK</a>
+                    </div>
+                </li>
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropbtn">Mehr</a>
                     <div class="dropdown-content">
-                        <a href="#social-media">Social Media</a>
-                        <a href="#projects">Projekte</a>
                         <a href="#videos">Videos</a>
                         <a href="#blog">Blog</a>
                     </div>
                 </li>
-                <li><a href="#contact">Kontakt</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Social Media</a>
+                    <div class="dropdown-content">
+                        <a href="#youtube">YouTube</a>
+                        <a href="#twitch">Twitch</a>
+                        <a href="#thinigverse">Thingiverse</a>
+                        <a href="#makerworld">Makerworld</a>
+                        <a href="#github">Github</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#contact">Kontakt</a>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Datenverarbeitung</a>
+                    <div class="dropdown-content">
+                        <a href="https://impressum.bbd-8.org">Impressum</a>
+                        <a href="https://tos.bbd-8.org">Datenschutz</a>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
     
     <!-- Main Content -->
     <main>
-        <section id="home">
+        <section>
             <h1>Willkommen auf meiner Webseite!</h1>
             <p>Hier geht es um 3D-Druck, Coding und Gaming!</p>
         </section>
@@ -44,25 +72,30 @@
         <section id="social-media">
             <h2>Social Media</h2>
             <div class="social-media">
-                <div class="social-media-preview">
+                <div class="social-media-preview" id="#youtube">
                     <h3>YouTube</h3>
                     <img src="https://static.vecteezy.com/system/resources/previews/023/986/480/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png" alt="YouTube Logo" class="social-media-image">
                     <a href="https://www.youtube.com/channel/UCPJb1XOOcTvnXZdR2mlKOAQ" class="link-black">Meinem YouTube-Kanal</a>
                 </div>
-                <div class="social-media-preview">
+                <div class="social-media-preview" id="#twitch">
                     <h3>Twitch</h3>
                     <img src="https://f.media-amazon.com/images/I/21kRx-CJsUL.png" alt="Twitch Logo" class="social-media-image">
                     <a href="https://www.twitch.tv/kilianb1399" class="link-black">Meinem Twitch-Kanal</a>
                 </div>
-                <div class="social-media-preview">
+                <div class="social-media-preview" id="#thinigverse">
                     <h3>Thingiverse</h3>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Thingiverse_Logo_192x192.png" alt="Thingiverse Logo" class="social-media-image">
                     <a href="https://www.thingiverse.com/kilianb/designs" class="link-black">Meinem Thingiverse-Konto</a>
                 </div>
-                <div class="social-media-preview">
+                <div class="social-media-preview" id="#makerworld">
                     <h3>Makerworld</h3>
                     <img src="assets/content/preview_makerworld_accountlinks.png" alt="Makerworld Logo" class="social-media-image">
                     <a href="https://makerworld.com/en/@kilianb." class="link-black">Meinem Makerworld-Profil</a>
+                </div>
+                <div class="social-media-preview" id="#github">
+                    <h3>Github</h3>
+                    <img src="assets/content/github-mark-white.png" alt="Github Logo" class="social-media-image">
+                    <a href="https://github.com/KilianB1399">Mein Github Profil</a>
                 </div>
             </div>
         </section>
@@ -70,13 +103,13 @@
         <section id="projects">
             <h2>GitHub-Projekte</h2>
             <p>Hier findest du eine Auswahl meiner GitHub-Projekte:</p>
-            <div class="project">
-                <h3>Meine Webseite</h3>
+            <div class="project" id="project-webseite">
+                <h3>Meine Homepage</h3>
                 <a href="https://github.com/KilianB1399/Webseite"><img src="assets/content/preview_website.png" alt="Webseiten Vorschau" class="project-preview-image"></a>
                 <p>Beschreibung muss hier noch geschrieben werden</p>
                 <a href="https://github.com/KilianB1399/Webseite" class="link-green">Link zum Projekt</a>
             </div>
-            <div class="project">
+            <div class="project" id="project-antiafk">
                 <h3>Python Anti AFK</h3>
                 <a href="https://github.com/KilianB1399/Webseite"><img src="assets/content/preview-anti-afk.png" alt="Anti AFK Vorschau" class="project-preview-image"></a>
                 <p>Beschreibung muss hier noch geschrieben werden</p>
@@ -144,6 +177,8 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 KilianB. Alle Rechte vorbehalten.</p>
+            <a href="https://tos.bbd-8.org">Datenschutz</a>
+            <a href="https://impressum.bbd-8.org">Impressum</a>
     </footer>
 
     <!-- Scripts -->
