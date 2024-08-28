@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML & CSS Aufgaben für Anfänger</title>
+    <title>HTML, CSS & JavaScript Aufgaben für Anfänger</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -41,21 +41,83 @@
             padding: 10px;
             border-left: 5px solid #27ae60;
             margin-top: 10px;
+            display: none; /* Lösungen standardmäßig ausblenden */
         }
 
         .solution h3 {
             margin-top: 0;
         }
+
+        .show-solution-btn {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .show-solution-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .dropdown {
+            display: none;
+            background-color: #f1f1f1;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            position: absolute;
+            z-index: 1;
+        }
+
+        .dropdown a {
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown a:hover {
+            background-color: #ddd;
+        }
+
+        .contact-form {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #219150;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>HTML & CSS Aufgaben für Anfänger</h1>
+        <h1>HTML, CSS & JavaScript Aufgaben für Anfänger</h1>
 
-        <!-- Aufgabe 1 -->
+        <!-- HTML und CSS Aufgaben -->
         <h2>Aufgabe 1: Erste HTML-Seite erstellen</h2>
         <p>Erstelle eine einfache HTML-Seite mit der grundlegenden Struktur und einem Titel.</p>
-        <div class="solution">
+        <button class="show-solution-btn" onclick="toggleSolution('solution1')">Lösung anzeigen</button>
+        <div id="solution1" class="solution">
             <h3>Lösung:</h3>
             <pre>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -69,10 +131,10 @@
 &lt;/html&gt;</pre>
         </div>
 
-        <!-- Aufgabe 2 -->
         <h2>Aufgabe 2: Weitere HTML-Elemente hinzufügen</h2>
         <p>Füge eine ungeordnete Liste, einen Hyperlink und ein Bild zu deiner HTML-Seite hinzu.</p>
-        <div class="solution">
+        <button class="show-solution-btn" onclick="toggleSolution('solution2')">Lösung anzeigen</button>
+        <div id="solution2" class="solution">
             <h3>Lösung:</h3>
             <pre>&lt;ul&gt;
     &lt;li&gt;HTML lernen&lt;/li&gt;
@@ -85,10 +147,10 @@
 &lt;img src="https://via.placeholder.com/150" alt="Platzhalter Bild"&gt;</pre>
         </div>
 
-        <!-- Aufgabe 3 -->
         <h2>Aufgabe 3: Einführung in CSS</h2>
         <p>Erstelle eine externe CSS-Datei und verknüpfe sie mit deiner HTML-Datei, um grundlegende Stile hinzuzufügen.</p>
-        <div class="solution">
+        <button class="show-solution-btn" onclick="toggleSolution('solution3')">Lösung anzeigen</button>
+        <div id="solution3" class="solution">
             <h3>Lösung:</h3>
             <pre>&lt;!-- Verknüpfung der CSS-Datei --&gt;
 &lt;head&gt;
@@ -112,10 +174,10 @@ p {
 }</pre>
         </div>
 
-        <!-- Aufgabe 4 -->
         <h2>Aufgabe 4: Layout mit CSS</h2>
         <p>Erstelle eine Box mit CSS, um das CSS-Box-Modell zu verstehen.</p>
-        <div class="solution">
+        <button class="show-solution-btn" onclick="toggleSolution('solution4')">Lösung anzeigen</button>
+        <div id="solution4" class="solution">
             <h3>Lösung:</h3>
             <pre>&lt;!-- HTML --&gt;
 &lt;div class="box"&gt;
@@ -139,10 +201,10 @@ p {
 }</pre>
         </div>
 
-        <!-- Aufgabe 5 -->
         <h2>Aufgabe 5: Responsive Design mit CSS</h2>
         <p>Verwende Media Queries, um deine Webseite für verschiedene Bildschirmgrößen anzupassen.</p>
-        <div class="solution">
+        <button class="show-solution-btn" onclick="toggleSolution('solution5')">Lösung anzeigen</button>
+        <div id="solution5" class="solution">
             <h3>Lösung:</h3>
             <pre>&lt;!-- CSS --&gt;
 /* styles.css */
@@ -153,6 +215,349 @@ p {
     }
 }</pre>
         </div>
+
+        <!-- Weitere HTML- und CSS-Aufgaben -->
+        <h2>Aufgabe 6: Tabelle erstellen</h2>
+        <p>Erstelle eine Tabelle mit HTML, die eine Liste von Büchern mit Titel und Autor enthält.</p>
+        <button class="show-solution-btn" onclick="toggleSolution('solution6')">Lösung anzeigen</button>
+        <div id="solution6" class="solution">
+            <h3>Lösung:</h3>
+            <pre>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Titel&lt;/th&gt;
+        &lt;th&gt;Autor&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Harry Potter&lt;/td&gt;
+        &lt;td&gt;J.K. Rowling&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Der Herr der Ringe&lt;/td&gt;
+        &lt;td&gt;J.R.R. Tolkien&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre>
+        </div>
+
+        <h2>Aufgabe 7: Inline-CSS anwenden</h2>
+        <p>Verwende Inline-CSS, um die Farbe und Schriftgröße eines Textes auf deiner Webseite zu ändern.</p>
+        <button class="show-solution-btn" onclick="toggleSolution('solution7')">Lösung anzeigen</button>
+        <div id="solution7" class="solution">
+            <h3>Lösung:</h3>
+            <pre>&lt;p style="color: blue; font-size: 20px;"&gt;Dies ist ein blauer Text mit einer Schriftgröße von 20px.&lt;/p&gt;</pre>
+        </div>
+
+        <h2>Aufgabe 8: Formular erstellen</h2>
+        <p>Erstelle ein einfaches HTML-Formular mit Eingabefeldern für Name und E-Mail.</p>
+        <button class="show-solution-btn" onclick="toggleSolution('solution8')">Lösung anzeigen</button>
+        <div id="solution8" class="solution">
+            <h3>Lösung:</h3>
+            <pre>&lt;form&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;&lt;br&gt;&lt;br&gt;
+    &lt;label for="email"&gt;E-Mail:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;&lt;br&gt;
+    &lt;input type="submit" value="Absenden"&gt;
+&lt;/form&gt;</pre>
+        </div>
+
+        <h2>Aufgabe 9: Button mit CSS stylen</h2>
+        <p>Füge CSS hinzu, um den Button in deinem Formular zu stylen.</p>
+        <button class="show-solution-btn" onclick="toggleSolution('solution9')">Lösung anzeigen</button>
+        <div id="solution9" class="solution">
+            <h3>Lösung:</h3>
+            <pre>&lt;!-- CSS --&gt;
+/* styles.css */
+input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}</pre>
+        </div>
+
+        <h2>Aufgabe 10: Bildergalerie erstellen</h2>
+        <p>Erstelle eine einfache Bildergalerie mit drei Bildern nebeneinander.</p>
+        <button class="show-solution-btn" onclick="toggleSolution('solution10')">Lösung anzeigen</button>
+        <div id="solution10" class="solution">
+            <h3>Lösung:</h3>
+            <pre>&lt;!-- HTML --&gt;
+&lt;div class="gallery"&gt;
+    &lt;img src="https://via.placeholder.com/150" alt="Bild 1"&gt;
+    &lt;img src="https://via.placeholder.com/150" alt="Bild 2"&gt;
+    &lt;img src="https://via.placeholder.com/150" alt="Bild 3"&gt;
+&lt;/div&gt;
+
+&lt;!-- CSS --&gt;
+/* styles.css */
+.gallery {
+    display: flex;
+    justify-content: space-between;
+}</pre>
+        </div>
+
+        <h2>Aufgabe 11: Navigation erstellen</h2>
+        <p>Erstelle eine Navigationsleiste mit Links zu verschiedenen Abschnitten deiner Webseite.</p>
+        <button class="show-solution-btn" onclick="toggleSolution('solution11')">Lösung anzeigen</button>
+        <div id="solution11" class="solution">
+            <h3>Lösung:</h3>
+            <pre>&lt;nav&gt;
+    &lt;a href="#home"&gt;Home&lt;/a&gt;
+    &lt;a href="#about"&gt;Über Uns&lt;/a&gt;
+    &lt;a href="#contact"&gt;Kontakt&lt;/a&gt;
+&lt;/nav&gt;</pre>
+        </div>
+
+        <h2>Aufgabe 12: HTML5-Elemente verwenden</h2>
+        <p>Erstelle eine HTML-Seite mit den neuen HTML5-Elementen wie <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code> und <code>&lt;section&gt;</code>.</p>
+        <button class="show-solution-btn" onclick="toggleSolution('solution12')">Lösung anzeigen</button>
+        <div id="solution12" class="solution">
+            <h3>Lösung:</h3>
+            <pre>&lt;header&gt;
+    &lt;h1&gt;Meine Webseite&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;section&gt;
+    &lt;h2&gt;Über Uns&lt;/h2&gt;
+    &lt;p&gt;Hier steht etwas über uns.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;article&gt;
+    &lt;h2&gt;Ein interessanter Artikel&lt;/h2&gt;
+    &lt;p&gt;Dieser Artikel enthält interessante Informationen.&lt;/p&gt;
+&lt;/article&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;&copy; 2024 Meine Webseite&lt;/p&gt;
+&lt;/footer&gt;</pre>
+        </div>
+
+        <h2>Aufgabe 13: Schriftarten mit Google Fonts einbinden</h2>
+        <p>Binde eine benutzerdefinierte Schriftart von Google Fonts in deine Webseite ein.</p>
+        <button class="show-solution-btn" onclick="toggleSolution('solution13')">Lösung anzeigen</button>
+        <div id="solution13" class="solution">
+            <h3>Lösung:</h3>
+            <pre>&lt;!-- HTML --&gt;
+&lt;head&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"&gt;
+&lt;/head&gt;
+
+&lt;!-- CSS --&gt;
+/* styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+}</pre>
+        </div>
+
+        <h2>Aufgabe 14: Farbschema mit CSS-Variablen</h2>
+        <p>Erstelle ein Farbschema mit CSS-Variablen und verwende es auf deiner Webseite.</p>
+        <button class="show-solution-btn" onclick="toggleSolution('solution14')">Lösung anzeigen</button>
+        <div id="solution14" class="solution">
+            <h3>Lösung:</h3>
+            <pre>&lt;!-- CSS --&gt;
+/* styles.css */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #333;
+}
+
+body {
+    color: var(--text-color);
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+button {
+    background-color: var(--secondary-color);
+}</pre>
+        </div>
+
+        <h2>Aufgabe 15: Einfache Animation mit CSS</h2>
+        <p>Erstelle eine einfache Animation mit CSS, die ein Element langsam einblendet.</p>
+        <button class="show-solution-btn" onclick="toggleSolution('solution15')">Lösung anzeigen</button>
+        <div id="solution15" class="solution">
+            <h3>Lösung:</h3>
+            <pre>&lt;!-- HTML --&gt;
+&lt;div class="fade-in"&gt;Ich werde langsam sichtbar!&lt;/div&gt;
+
+&lt;!-- CSS --&gt;
+/* styles.css */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}</pre>
+        </div>
+
+        <h2>Aufgabe 16: Flexbox Layout erstellen</h2>
+        <p>Erstelle ein einfaches Layout mit CSS Flexbox, um Elemente horizontal und vertikal zu zentrieren.</p>
+        <button class="show-solution-btn" onclick="toggleSolution('solution16')">Lösung anzeigen</button>
+        <div id="solution16" class="solution">
+            <h3>Lösung:</h3>
+            <pre>&lt;!-- HTML --&gt;
+&lt;div class="flex-container"&gt;
+    &lt;div&gt;Element 1&lt;/div&gt;
+    &lt;div&gt;Element 2&lt;/div&gt;
+    &lt;div&gt;Element 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- CSS --&gt;
+/* styles.css */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: 1px solid #ccc;
+}</pre>
+        </div>
+
+        <h2>Aufgabe 17: CSS Grid Layout</h2>
+        <p>Erstelle ein einfaches Layout mit CSS Grid, um eine Galerie von Bildern zu erstellen.</p>
+        <button class="show-solution-btn" onclick="toggleSolution('solution17')">Lösung anzeigen</button>
+        <div id="solution17" class="solution">
+            <h3>Lösung:</h3>
+            <pre>&lt;!-- HTML --&gt;
+&lt;div class="grid-container"&gt;
+    &lt;div&gt;Bild 1&lt;/div&gt;
+    &lt;div&gt;Bild 2&lt;/div&gt;
+    &lt;div&gt;Bild 3&lt;/div&gt;
+    &lt;div&gt;Bild 4&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- CSS --&gt;
+/* styles.css */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}</pre>
+        </div>
+
+        <h2>Aufgabe 18: JavaScript - Einfacher Klick-Event-Handler</h2>
+        <p>Erstelle einen Button und verwende JavaScript, um eine Nachricht anzuzeigen, wenn der Button geklickt wird.</p>
+        <button class="show-solution-btn" onclick="toggleSolution('solution18')">Lösung anzeigen</button>
+        <div id="solution18" class="solution">
+            <h3>Lösung:</h3>
+            <pre>&lt;!-- HTML --&gt;
+&lt;button onclick="showMessage()"&gt;Klick mich!&lt;/button&gt;
+
+&lt;!-- JavaScript --&gt;
+&lt;script&gt;
+function showMessage() {
+    alert('Button wurde geklickt!');
+}
+&lt;/script&gt;</pre>
+        </div>
+
+        <h2>Aufgabe 19: Dropdown-Menü mit JavaScript</h2>
+        <p>Erstelle ein Dropdown-Menü, das mit einem Klick ein- und ausgeblendet wird.</p>
+        <button class="show-solution-btn" onclick="toggleSolution('solution19')">Lösung anzeigen</button>
+        <div id="solution19" class="solution">
+            <h3>Lösung:</h3>
+            <pre>&lt;!-- HTML --&gt;
+&lt;div class="dropdown-container"&gt;
+    &lt;button onclick="toggleDropdown()"&gt;Dropdown anzeigen&lt;/button&gt;
+    &lt;div class="dropdown" id="myDropdown"&gt;
+        &lt;a href="#"&gt;Link 1&lt;/a&gt;
+        &lt;a href="#"&gt;Link 2&lt;/a&gt;
+        &lt;a href="#"&gt;Link 3&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- JavaScript --&gt;
+&lt;script&gt;
+function toggleDropdown() {
+    var dropdown = document.getElementById('myDropdown');
+    if (dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+    } else {
+        dropdown.style.display = 'block';
+    }
+}
+&lt;/script&gt;
+
+&lt;!-- CSS --&gt;
+/* styles.css */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+&lt;/style&gt;</pre>
+        </div>
+
+        <h2>Aufgabe 20: Kontaktformular mit JavaScript validieren</h2>
+        <p>Erstelle ein Kontaktformular mit JavaScript, das die Eingaben überprüft, bevor es gesendet wird.</p>
+        <button class="show-solution-btn" onclick="toggleSolution('solution20')">Lösung anzeigen</button>
+        <div id="solution20" class="solution">
+            <h3>Lösung:</h3>
+            <pre>&lt;!-- HTML --&gt;
+&lt;form id="contactForm"&gt;
+    &lt;input type="text" id="contactName" placeholder="Name"&gt;&lt;br&gt;&lt;br&gt;
+    &lt;input type="email" id="contactEmail" placeholder="E-Mail"&gt;&lt;br&gt;&lt;br&gt;
+    &lt;textarea id="contactMessage" placeholder="Nachricht"&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+    &lt;button type="button" onclick="validateForm()"&gt;Senden&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;!-- JavaScript --&gt;
+&lt;script&gt;
+function validateForm() {
+    var name = document.getElementById('contactName').value;
+    var email = document.getElementById('contactEmail').value;
+    var message = document.getElementById('contactMessage').value;
+    if (name == "" || email == "" || message == "") {
+        alert("Bitte füllen Sie alle Felder aus.");
+    } else {
+        alert("Vielen Dank für Ihre Nachricht!");
+    }
+}
+&lt;/script&gt;</pre>
+        </div>
+
+        <!-- JavaScript für das Umschalten der Lösungen -->
+        <script>
+            function toggleSolution(id) {
+                var solution = document.getElementById(id);
+                if (solution.style.display === "block") {
+                    solution.style.display = "none";
+                } else {
+                    solution.style.display = "block";
+                }
+            }
+        </script>
     </div>
 </body>
 </html>

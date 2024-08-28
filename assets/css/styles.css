@@ -181,6 +181,8 @@ iframe {
 .project-preview-image {
     max-width: 100%;
     height: auto;
+    width: 650px;
+    height: 600px;
     display: block;
     margin: 0 auto;
 }
