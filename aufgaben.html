@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS Aufgaben für Anfänger</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        pre {
+            background-color: #f7f7f7;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .solution {
+            background-color: #e0f7e9;
+            padding: 10px;
+            border-left: 5px solid #27ae60;
+            margin-top: 10px;
+        }
+
+        .solution h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HTML & CSS Aufgaben für Anfänger</h1>
+
+        <!-- Aufgabe 1 -->
+        <h2>Aufgabe 1: Erste HTML-Seite erstellen</h2>
+        <p>Erstelle eine einfache HTML-Seite mit der grundlegenden Struktur und einem Titel.</p>
+        <div class="solution">
+            <h3>Lösung:</h3>
+            <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Meine erste Webseite&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Willkommen auf meiner Webseite&lt;/h1&gt;
+    &lt;p&gt;Dies ist mein erster Versuch mit HTML.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+        </div>
+
+        <!-- Aufgabe 2 -->
+        <h2>Aufgabe 2: Weitere HTML-Elemente hinzufügen</h2>
+        <p>Füge eine ungeordnete Liste, einen Hyperlink und ein Bild zu deiner HTML-Seite hinzu.</p>
+        <div class="solution">
+            <h3>Lösung:</h3>
+            <pre>&lt;ul&gt;
+    &lt;li&gt;HTML lernen&lt;/li&gt;
+    &lt;li&gt;CSS lernen&lt;/li&gt;
+    &lt;li&gt;JavaScript lernen&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;a href="https://www.google.com" target="_blank"&gt;Besuche Google&lt;/a&gt;
+
+&lt;img src="https://via.placeholder.com/150" alt="Platzhalter Bild"&gt;</pre>
+        </div>
+
+        <!-- Aufgabe 3 -->
+        <h2>Aufgabe 3: Einführung in CSS</h2>
+        <p>Erstelle eine externe CSS-Datei und verknüpfe sie mit deiner HTML-Datei, um grundlegende Stile hinzuzufügen.</p>
+        <div class="solution">
+            <h3>Lösung:</h3>
+            <pre>&lt;!-- Verknüpfung der CSS-Datei --&gt;
+&lt;head&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+
+&lt;!-- Inhalt der styles.css --&gt;
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+p {
+    font-size: 18px;
+}</pre>
+        </div>
+
+        <!-- Aufgabe 4 -->
+        <h2>Aufgabe 4: Layout mit CSS</h2>
+        <p>Erstelle eine Box mit CSS, um das CSS-Box-Modell zu verstehen.</p>
+        <div class="solution">
+            <h3>Lösung:</h3>
+            <pre>&lt;!-- HTML --&gt;
+&lt;div class="box"&gt;
+    &lt;h2&gt;Eine Box&lt;/h2&gt;
+    &lt;p&gt;Dies ist eine einfache Box mit ein wenig Text darin.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- CSS --&gt;
+/* styles.css */
+.box {
+    width: 300px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.box h2 {
+    margin-top: 0;
+}</pre>
+        </div>
+
+        <!-- Aufgabe 5 -->
+        <h2>Aufgabe 5: Responsive Design mit CSS</h2>
+        <p>Verwende Media Queries, um deine Webseite für verschiedene Bildschirmgrößen anzupassen.</p>
+        <div class="solution">
+            <h3>Lösung:</h3>
+            <pre>&lt;!-- CSS --&gt;
+/* styles.css */
+@media (max-width: 600px) {
+    .box {
+        width: 100%;
+        padding: 10px;
+    }
+}</pre>
+        </div>
+    </div>
+</body>
+</html>
