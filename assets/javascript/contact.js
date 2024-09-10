@@ -8,7 +8,7 @@ function submitForm() {
     var message = document.getElementById("message").value;
 
     var mailtoLink = "mailto:bogus.kilian@outlook.de"
-        + "?subject=" + encodeURIComponent(subject)
+        + "?subject=" + encodeURIComponent(subject + " (" + name + lastName + ")")
         + "&body=" + encodeURIComponent("Name: " + name + "\n"
             + "Nachname: " + lastName + "\n"
             + "E-Mail: " + email + "\n"

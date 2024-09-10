@@ -20,7 +20,6 @@ a {
     text-decoration: none;
 }
 
-/* Header Styles */
 header {
     background-color: #333;
     color: #fff;
@@ -39,7 +38,7 @@ nav ul {
 
 nav ul li {
     margin: 0 15px;
-    position: relative; /* For dropdown positioning */
+    position: relative;
 }
 
 nav ul li a {
@@ -52,15 +51,14 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Dropdown Menu Styles */
 .dropdown-content {
-    display: none; /* Hidden by default */
+    display: none;
     position: absolute;
     background-color: #333;
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    flex-direction: column; /* Stack dropdown items */
+    flex-direction: column;
     text-align: left;
 }
 
@@ -76,10 +74,9 @@ nav ul li a:hover {
 }
 
 .dropdown:hover .dropdown-content {
-    display: block; /* Show dropdown on hover */
+    display: block;
 }
 
-/* Section Styles */
 section {
     padding: 20px;
     margin: 20px;
@@ -87,13 +84,12 @@ section {
     border-radius: 5px;
 }
 
-/* Contact Form Styles */
 .contact-container {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 30%; /* Adjusted width */
+    width: 30%;
     margin: 0 auto;
 }
 
@@ -132,9 +128,8 @@ button[type="submit"]:hover {
     background-color: #4cae4c;
 }
 
-/* Map Styles */
 .map-container {
-    width: 30%; /* Adjusted width */
+    width: 30%;
     margin: 0 auto;
 }
 
@@ -167,7 +162,6 @@ iframe {
     border: 1px solid #c0c0c0;
 }
 
-/* Projects Section Styles */
 #projects {
     text-align: center;
     padding: 20px;
@@ -187,7 +181,6 @@ iframe {
     margin: 0 auto;
 }
 
-/* Social Media Styles */
 #social-media {
     text-align: center;
     padding: 20px;
@@ -216,7 +209,6 @@ iframe {
     border-radius: 50%;
 }
 
-/* Footer Styles */
 footer {
     text-align: center;
     padding: 10px;
@@ -236,11 +228,9 @@ footer p {
     color: #ffffff;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
-    /* Adjust navigation menu */
     nav ul {
-        flex-direction: column; /* Stack nav items vertically */
+        flex-direction: column;
         padding: 0;
     }
 
@@ -248,7 +238,6 @@ footer p {
         margin: 10px 0;
     }
 
-    /* Dropdown functionality for mobile */
     .dropdown-content {
         display: none;
     }
@@ -266,13 +255,11 @@ footer p {
         text-align: center;
     }
 
-    /* Adjust container widths for mobile */
     .contact-container, .map-container {
         width: 90%;
         margin: 10px auto;
     }
 
-    /* Adjust social media preview for mobile */
     .social-media {
         flex-direction: column;
     }
@@ -280,4 +267,83 @@ footer p {
     .social-media-preview {
         margin-bottom: 20px;
     }
+}
+
+.social-media-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-media-links-preview {
+    width: 40px;
+    height: auto;
+}
+
+
+/* Added CSS for the Skills Section */
+.skills-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.skills-heading {
+    font-size: 36px;
+    color: #bb2efc;
+    margin-bottom: 30px;
+}
+
+.skills {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #bb2efc;
+}
+
+.progress-bar {
+    background-color: #432850;
+    border-radius: 25px;
+    height: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress {
+    background-color: #d984fc;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.experience {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.box {
+    text-align: center;
+    border: 2px solid #d984fc;
+    padding: 20px;
+    border-radius: 10px;
+    width: 150px;
+}
+
+.box h2 {
+    font-size: 36px;
+    color: #d984fc;
+}
+
+.box p {
+    color: #bb2efc;
+    margin-top: 10px;
+    font-size: 18px;
 }
